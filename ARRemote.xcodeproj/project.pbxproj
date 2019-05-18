@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB624DCD229078F10069C25F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB624DCC229078F10069C25F /* AppDelegate.swift */; };
+		DB624DCF229078F10069C25F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB624DCE229078F10069C25F /* ViewController.swift */; };
+		DB624DD2229078F10069C25F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB624DD0229078F10069C25F /* Main.storyboard */; };
+		DB624DD4229078F20069C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB624DD3229078F20069C25F /* Assets.xcassets */; };
+		DB624DD7229078F20069C25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB624DD5229078F20069C25F /* LaunchScreen.storyboard */; };
+		DB624DE2229078F30069C25F /* ARRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB624DE1229078F30069C25F /* ARRemoteTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB624DDE229078F30069C25F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB624DC1229078F10069C25F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB624DC8229078F10069C25F;
+			remoteInfo = ARRemote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB624DC9229078F10069C25F /* ARRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB624DCC229078F10069C25F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB624DCE229078F10069C25F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB624DD1229078F10069C25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB624DD3229078F20069C25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB624DD6229078F20069C25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB624DD8229078F20069C25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB624DDD229078F20069C25F /* ARRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB624DE1229078F30069C25F /* ARRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARRemoteTests.swift; sourceTree = "<group>"; };
+		DB624DE3229078F30069C25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB624DC6229078F10069C25F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB624DDA229078F20069C25F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB624DC0229078F10069C25F = {
+			isa = PBXGroup;
+			children = (
+				DB624DCB229078F10069C25F /* ARRemote */,
+				DB624DE0229078F30069C25F /* ARRemoteTests */,
+				DB624DCA229078F10069C25F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB624DCA229078F10069C25F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB624DC9229078F10069C25F /* ARRemote.app */,
+				DB624DDD229078F20069C25F /* ARRemoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB624DCB229078F10069C25F /* ARRemote */ = {
+			isa = PBXGroup;
+			children = (
+				DB624DCC229078F10069C25F /* AppDelegate.swift */,
+				DB624DCE229078F10069C25F /* ViewController.swift */,
+				DB624DD0229078F10069C25F /* Main.storyboard */,
+				DB624DD3229078F20069C25F /* Assets.xcassets */,
+				DB624DD5229078F20069C25F /* LaunchScreen.storyboard */,
+				DB624DD8229078F20069C25F /* Info.plist */,
+			);
+			path = ARRemote;
+			sourceTree = "<group>";
+		};
+		DB624DE0229078F30069C25F /* ARRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB624DE1229078F30069C25F /* ARRemoteTests.swift */,
+				DB624DE3229078F30069C25F /* Info.plist */,
+			);
+			path = ARRemoteTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB624DC8229078F10069C25F /* ARRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB624DE6229078F30069C25F /* Build configuration list for PBXNativeTarget "ARRemote" */;
+			buildPhases = (
+				DB624DC5229078F10069C25F /* Sources */,
+				DB624DC6229078F10069C25F /* Frameworks */,
+				DB624DC7229078F10069C25F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARRemote;
+			productName = ARRemote;
+			productReference = DB624DC9229078F10069C25F /* ARRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB624DDC229078F20069C25F /* ARRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB624DE9229078F30069C25F /* Build configuration list for PBXNativeTarget "ARRemoteTests" */;
+			buildPhases = (
+				DB624DD9229078F20069C25F /* Sources */,
+				DB624DDA229078F20069C25F /* Frameworks */,
+				DB624DDB229078F20069C25F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB624DDF229078F30069C25F /* PBXTargetDependency */,
+			);
+			name = ARRemoteTests;
+			productName = ARRemoteTests;
+			productReference = DB624DDD229078F20069C25F /* ARRemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB624DC1229078F10069C25F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Dani Tox";
+				TargetAttributes = {
+					DB624DC8229078F10069C25F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					DB624DDC229078F20069C25F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DB624DC8229078F10069C25F;
+					};
+				};
+			};
+			buildConfigurationList = DB624DC4229078F10069C25F /* Build configuration list for PBXProject "ARRemote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB624DC0229078F10069C25F;
+			productRefGroup = DB624DCA229078F10069C25F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB624DC8229078F10069C25F /* ARRemote */,
+				DB624DDC229078F20069C25F /* ARRemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB624DC7229078F10069C25F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB624DD7229078F20069C25F /* LaunchScreen.storyboard in Resources */,
+				DB624DD4229078F20069C25F /* Assets.xcassets in Resources */,
+				DB624DD2229078F10069C25F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB624DDB229078F20069C25F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB624DC5229078F10069C25F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB624DCF229078F10069C25F /* ViewController.swift in Sources */,
+				DB624DCD229078F10069C25F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB624DD9229078F20069C25F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB624DE2229078F30069C25F /* ARRemoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB624DDF229078F30069C25F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB624DC8229078F10069C25F /* ARRemote */;
+			targetProxy = DB624DDE229078F30069C25F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB624DD0229078F10069C25F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB624DD1229078F10069C25F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB624DD5229078F20069C25F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB624DD6229078F20069C25F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB624DE4229078F30069C25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB624DE5229078F30069C25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB624DE7229078F30069C25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R779A64KR9;
+				INFOPLIST_FILE = ARRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ARRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB624DE8229078F30069C25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R779A64KR9;
+				INFOPLIST_FILE = ARRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ARRemote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB624DEA229078F30069C25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R779A64KR9;
+				INFOPLIST_FILE = ARRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ARRemoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARRemote.app/ARRemote";
+			};
+			name = Debug;
+		};
+		DB624DEB229078F30069C25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R779A64KR9;
+				INFOPLIST_FILE = ARRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danitox.ARRemoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARRemote.app/ARRemote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB624DC4229078F10069C25F /* Build configuration list for PBXProject "ARRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB624DE4229078F30069C25F /* Debug */,
+				DB624DE5229078F30069C25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB624DE6229078F30069C25F /* Build configuration list for PBXNativeTarget "ARRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB624DE7229078F30069C25F /* Debug */,
+				DB624DE8229078F30069C25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB624DE9229078F30069C25F /* Build configuration list for PBXNativeTarget "ARRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB624DEA229078F30069C25F /* Debug */,
+				DB624DEB229078F30069C25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB624DC1229078F10069C25F /* Project object */;
+}
