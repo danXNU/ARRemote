@@ -13,6 +13,7 @@
 		DB624DD4229078F20069C25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB624DD3229078F20069C25F /* Assets.xcassets */; };
 		DB624DD7229078F20069C25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB624DD5229078F20069C25F /* LaunchScreen.storyboard */; };
 		DB624DE2229078F30069C25F /* ARRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB624DE1229078F30069C25F /* ARRemoteTests.swift */; };
+		DB624DEE22907CC30069C25F /* Packets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB624DED22907CC30069C25F /* Packets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DB624DDD229078F20069C25F /* ARRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB624DE1229078F30069C25F /* ARRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARRemoteTests.swift; sourceTree = "<group>"; };
 		DB624DE3229078F30069C25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB624DED22907CC30069C25F /* Packets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,9 @@
 		DB624DCB229078F10069C25F /* ARRemote */ = {
 			isa = PBXGroup;
 			children = (
-				DB624DCC229078F10069C25F /* AppDelegate.swift */,
+				DB624DEC229078FB0069C25F /* SupportingFiles */,
 				DB624DCE229078F10069C25F /* ViewController.swift */,
-				DB624DD0229078F10069C25F /* Main.storyboard */,
-				DB624DD3229078F20069C25F /* Assets.xcassets */,
-				DB624DD5229078F20069C25F /* LaunchScreen.storyboard */,
-				DB624DD8229078F20069C25F /* Info.plist */,
+				DB624DED22907CC30069C25F /* Packets.swift */,
 			);
 			path = ARRemote;
 			sourceTree = "<group>";
@@ -94,6 +93,18 @@
 				DB624DE3229078F30069C25F /* Info.plist */,
 			);
 			path = ARRemoteTests;
+			sourceTree = "<group>";
+		};
+		DB624DEC229078FB0069C25F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DB624DD5229078F20069C25F /* LaunchScreen.storyboard */,
+				DB624DD3229078F20069C25F /* Assets.xcassets */,
+				DB624DD0229078F10069C25F /* Main.storyboard */,
+				DB624DD8229078F20069C25F /* Info.plist */,
+				DB624DCC229078F10069C25F /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				DB624DCF229078F10069C25F /* ViewController.swift in Sources */,
 				DB624DCD229078F10069C25F /* AppDelegate.swift in Sources */,
+				DB624DEE22907CC30069C25F /* Packets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +374,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
-				INFOPLIST_FILE = ARRemote/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ARRemote/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +393,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
-				INFOPLIST_FILE = ARRemote/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ARRemote/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
