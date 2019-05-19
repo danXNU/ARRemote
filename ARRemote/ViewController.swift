@@ -29,15 +29,25 @@ class ViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if mcSession.connectedPeers.count <= 0 { return }
-        let packet = Packet.touch
-        if let data = try? JSONEncoder().encode(packet) {
-            try? mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
+        print("Here2")
+        let packet = Packet(comand: .touch)
+        
+        do {
+            let data = try JSONEncoder().encode(packet)
+            print("Sending....")
+            try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
+        } catch {
+            let alert = UIAlertController(title: "Errore", message: "\(error)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            print(error)
         }
+        
     }
 
     func setUpConnectivity() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .none)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
     }
     

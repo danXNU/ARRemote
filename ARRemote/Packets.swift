@@ -8,6 +8,11 @@
 
 import Foundation
 
-enum Packet: Int, Codable {
+enum Command: Int, Codable {
     case touch = 1
+}
+
+
+struct Packet: Codable {
+    var comand: Command
 }
