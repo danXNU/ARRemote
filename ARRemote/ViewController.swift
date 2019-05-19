@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     var mcSession: MCSession!
     var mcADAssistant: MCAdvertiserAssistant!
     
+    @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var tapRecognizer: UITapGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,25 +28,39 @@ class ViewController: UIViewController {
             mcBrowser.delegate = self
             self.present(mcBrowser, animated: true, completion: nil)
         }
+        
+        
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
+        print("Swiping...")
+        self.view.backgroundColor = .purple
+    }
+    
+    @IBAction func touch(_ sender: UITapGestureRecognizer) {
+        print("Touching...")
+        
         if mcSession.connectedPeers.count <= 0 { return }
-        print("Here2")
         let packet = Packet(comand: .touch)
         
         do {
             let data = try JSONEncoder().encode(packet)
             print("Sending....")
             try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
+            self.view.backgroundColor = UIColor.green
         } catch {
             let alert = UIAlertController(title: "Errore", message: "\(error)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             print(error)
+            self.view.backgroundColor = UIColor.red
         }
         
     }
+    
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        
+//    }
 
     func setUpConnectivity() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
