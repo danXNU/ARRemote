@@ -22,6 +22,9 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="oAS-3R-8uc" appends="YES" id="t5t-dy-syN"/>
                             <outletCollection property="gestureRecognizers" destination="6IL-Mw-cTa" appends="YES" id="W7H-4k-ngr"/>
+                            <outletCollection property="gestureRecognizers" destination="8r8-iV-GTK" appends="YES" id="Y6l-pe-PSw"/>
+                            <outletCollection property="gestureRecognizers" destination="vyC-e6-3mQ" appends="YES" id="ePk-54-HoI"/>
+                            <outletCollection property="gestureRecognizers" destination="yO0-RH-2Dm" appends="YES" id="1Nz-r8-O23"/>
                         </connections>
                     </view>
                     <connections>
@@ -40,6 +43,21 @@
                         <action selector="touch:" destination="BYZ-38-t0r" id="1Cx-LR-mEy"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="8r8-iV-GTK">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="ECw-b7-TlQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="vyC-e6-3mQ">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="D3j-Ee-lFX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="yO0-RH-2Dm">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="R5u-CE-nhs"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>

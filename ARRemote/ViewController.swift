@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
     var currentModeIndex = 0
+    var currentObjectIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,68 @@ class ViewController: UIViewController {
         
     }
     
-    func getModeCommand() -> Command {
+    func getObjectCommand(_ order: Order) -> Command {
+        var newIndex = self.currentObjectIndex
+        if order == .next {
+            newIndex += 1
+        } else {
+            newIndex -= 1
+        }
+        
+        if newIndex >= Objects.allCases.count {
+            newIndex = 0
+        } else if newIndex <= 0 {
+            newIndex = Objects.allCases.count - 1
+        }
+        
+        var commandSelected: Command!
+        for (index, object) in Objects.allCases.enumerated() {
+            if index == newIndex {
+                switch object {
+                case .and(let command):
+                    commandSelected = command
+                case .or(let command):
+                    commandSelected = command
+                case .pulsante(let command):
+                    commandSelected = command
+                    
+                case .treDueMS(let command):
+                    commandSelected = command
+                case .treDueBS(let command):
+                    commandSelected = command
+                case .cinqueDueMS(let command):
+                    commandSelected = command
+                case .cinqueDueBS(let command):
+                    commandSelected = command
+                    
+                case .timer(let command):
+                    commandSelected = command
+                case .frl(let command):
+                    commandSelected = command
+                case .cilindro(let command):
+                    commandSelected = command
+                case .finecorsa(let command):
+                    commandSelected = command
+                }
+            }
+        }
+        
+        self.currentObjectIndex = newIndex
+        return commandSelected
+    }
+    
+    func getModeCommand(_ order: Order) -> Command {
         var newIndex = self.currentModeIndex
-        newIndex += 1
+        if order == .next {
+            newIndex += 1
+        } else {
+            newIndex -= 1
+        }
         
         if newIndex >= Modes.allCases.count {
             newIndex = 0
+        } else if newIndex <= 0 {
+            newIndex = Modes.allCases.count - 1
         }
         
         var commandSelected: Command!
@@ -62,8 +119,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
-        print("Swiping...")
-        let command = getModeCommand()
+        var command: Command!
+        
+        switch sender.direction {
+        case .left: command = getModeCommand(.previous)
+        case .right: command = getModeCommand(.next)
+        case .up: command = getObjectCommand(.previous)
+        case .down: command = getObjectCommand(.next)
+        default: break
+        }
         
         send(command: command) {
             DispatchQueue.main.async {
