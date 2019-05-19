@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet var swipeRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
+    var currentModeIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,25 +31,56 @@ class ViewController: UIViewController {
             self.present(mcBrowser, animated: true, completion: nil)
         }
         
+    }
+    
+    func getModeCommand() -> Command {
+        var newIndex = self.currentModeIndex
+        newIndex += 1
         
+        if newIndex >= Modes.allCases.count {
+            newIndex = 0
+        }
+        
+        var commandSelected: Command!
+        for (index, mode) in Modes.allCases.enumerated() {
+            if index == newIndex {
+                switch mode {
+                case .place(let command):
+                    commandSelected = command
+                case .move(let command):
+                    commandSelected = command
+                case .edit(let command):
+                    commandSelected = command
+                case .circuit(let command):
+                    commandSelected = command
+                }
+            }
+        }
+        
+        self.currentModeIndex = newIndex
+        return commandSelected
     }
     
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         print("Swiping...")
-        self.view.backgroundColor = .purple
+        let command = getModeCommand()
+        
+        send(command: command) {
+            DispatchQueue.main.async {
+                self.view.backgroundColor = .purple
+            }
+        }
     }
     
-    @IBAction func touch(_ sender: UITapGestureRecognizer) {
-        print("Touching...")
-        
+    private func send(command: Command, completion: (() -> Void)? = nil) {
         if mcSession.connectedPeers.count <= 0 { return }
-        let packet = Packet(comand: .touch)
+        let packet = Packet(comand: command)
         
         do {
             let data = try JSONEncoder().encode(packet)
             print("Sending....")
             try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
-            self.view.backgroundColor = UIColor.green
+            completion?()
         } catch {
             let alert = UIAlertController(title: "Errore", message: "\(error)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -55,12 +88,17 @@ class ViewController: UIViewController {
             print(error)
             self.view.backgroundColor = UIColor.red
         }
-        
     }
     
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        
-//    }
+    @IBAction func touch(_ sender: UITapGestureRecognizer) {
+        print("Touching...")
+        send(command: .touch) {
+            DispatchQueue.main.async {
+                self.view.backgroundColor = UIColor.green
+            }
+        }
+    }
+    
 
     func setUpConnectivity() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
